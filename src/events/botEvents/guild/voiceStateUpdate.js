@@ -66,10 +66,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+          if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -89,10 +89,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+          if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -113,10 +113,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-           if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+           if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -136,10 +136,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-           if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+           if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -159,10 +159,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+          if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -194,10 +194,10 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
         parent: NewVoice.member.voice.channel.parentId,
         userLimit: NewVoice.member.voice.channel.userLimit
       }).then(async Channel => {
-        if (roomtemp) {
-            roomtemp.id = OldVoice.member.user.id,
-              roomtemp.room = Channel.id,
-              roomtemp.save();
+        if (temproom) {
+            temproom.id = OldVoice.member.user.id,
+              temproom.room = Channel.id,
+              temproom.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
