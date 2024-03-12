@@ -56,25 +56,25 @@ module.exports = {
           .addComponents(
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1079515867374698538')
+              .setEmoji('1211830692674146354')
               .setLabel('Lock')
               .setCustomId('LockChannel')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1079515869320855624')
+              .setEmoji('1211830694448201778')
               .setLabel('Unlock')
               .setCustomId('UnlockChannel')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1084858277730455683')
+              .setEmoji('1211830913957236776')
               .setLabel('Hide')
               .setCustomId('HideChannel')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1084859746605076480')
+              .setEmoji('1211830911440519180')
               .setLabel('Unhide')
               .setCustomId('UnhideChannel')
               .setDisabled(false))
@@ -82,25 +82,25 @@ module.exports = {
           .addComponents(
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1079515864891674694')
+              .setEmoji('1212088239792332892')
               .setLabel('Mute')
               .setCustomId('Mute')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1079515872118444062')
+              .setEmoji('1212089587397304362')
               .setLabel('Unmute')
               .setCustomId('Unmute')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1084915797463404614')
+              .setEmoji('1212129328675168296')
               .setLabel('Customize Users')
               .setCustomId('Customize_UserLimit')
               .setDisabled(false),
             new ButtonBuilder()
               .setStyle(ButtonStyle.Danger)
-              .setEmoji('1079515860516999290')
+              .setEmoji('1212140069121691658')
               .setLabel('Disconnect')
               .setCustomId('Disconnect')
               .setDisabled(false))
@@ -108,7 +108,7 @@ module.exports = {
           .addComponents(
             new ButtonBuilder()
               .setStyle(ButtonStyle.Secondary)
-              .setEmoji('1085174405895835699')
+              .setEmoji('1212128380909129828')
               .setLabel('Users Manager')
               .setCustomId('UsersManager')
               .setDisabled(false),
