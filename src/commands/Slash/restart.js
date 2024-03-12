@@ -26,7 +26,7 @@ module.exports = {
         iconURL: "https://cdn.discordapp.com/emojis/1211122518547632128.gif",
       })
       .setTimestamp()
-      .setThumbnail(client.user.displayAvatarURL()
+      .setThumbnail(client.user.displayAvatarURL())
       .addFields([
         {
           name: "**🤖┆Bot is:**",
