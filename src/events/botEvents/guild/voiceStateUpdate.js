@@ -76,8 +76,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
+          }            
             await NewVoice.member.voice.setChannel(Channel)
-          }
         })
       }
     }
@@ -100,8 +100,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-            await NewVoice.member.voice.setChannel(Channel)
           }
+            await NewVoice.member.voice.setChannel(Channel)
         })
       }
     }
@@ -124,8 +124,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
+           }
             await NewVoice.member.voice.setChannel(Channel)
-          }
         })
       }
     }
@@ -148,8 +148,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
+           }
             await NewVoice.member.voice.setChannel(Channel)
-          }
         })
       }
     }
@@ -172,8 +172,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
+         }
             await NewVoice.member.voice.setChannel(Channel)
-          }
         })
       }
     }
@@ -208,8 +208,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
+           }
             await NewVoice.member.voice.setChannel(Channel)
-          }
       })
     }
   }
