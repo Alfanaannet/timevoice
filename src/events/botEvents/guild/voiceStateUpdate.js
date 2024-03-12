@@ -66,11 +66,16 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          new roomtemp({
-            guid: NewVoice.guild.id,
-            id: OldVoice.member.user.id,
-            room: Channel.id,
-          }).save();
+          if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
+          } else {
+            new roomtemp({
+              guid: NewVoice.guild.id,
+              id: OldVoice.member.user.id,
+              room: Channel.id,
+            }).save();
           await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -79,15 +84,15 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
     if (roomsettings.room1) {
       if (NewVoice.channelId == roomsettings.room1) {
         await NewVoice.guild.channels.create({
-          name: `${NewVoice.member.user.username}'s Channel`,
+          name: `${channelName}`,
           type: ChannelType.GuildVoice,
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
+          if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
           } else {
             new roomtemp({
               guid: NewVoice.guild.id,
@@ -103,16 +108,21 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
     if (roomsettings.room2) {
       if (NewVoice.channelId == roomsettings.room2) {
         await NewVoice.guild.channels.create({
-          name: `${NewVoice.member.user.username}'s Channel`,
+          name: `${channelName}`,
           type: ChannelType.GuildVoice,
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          new roomtemp({
-            guid: NewVoice.guild.id,
-            id: OldVoice.member.user.id,
-            room: Channel.id,
-          }).save();
+           if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
+          } else {
+            new roomtemp({
+              guid: NewVoice.guild.id,
+              id: OldVoice.member.user.id,
+              room: Channel.id,
+            }).save();
           await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -121,16 +131,21 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
     if (roomsettings.room3) {
       if (NewVoice.channelId == roomsettings.room3) {
         await NewVoice.guild.channels.create({
-          name: `${NewVoice.member.user.username}'s Channel`,
+          name: `${channelName}`,
           type: ChannelType.GuildVoice,
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          new roomtemp({
-            guid: NewVoice.guild.id,
-            id: OldVoice.member.user.id,
-            room: Channel.id,
-          }).save();
+           if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
+          } else {
+            new roomtemp({
+              guid: NewVoice.guild.id,
+              id: OldVoice.member.user.id,
+              room: Channel.id,
+            }).save();
           await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -139,16 +154,21 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
     if (roomsettings.room4) {
       if (NewVoice.channelId == roomsettings.room4) {
         await NewVoice.guild.channels.create({
-          name: `${NewVoice.member.user.username}'s Channel`,
+          name: `${channelName}`,
           type: ChannelType.GuildVoice,
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          new roomtemp({
-            guid: NewVoice.guild.id,
-            id: OldVoice.member.user.id,
-            room: Channel.id,
-          }).save();
+          if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
+          } else {
+            new roomtemp({
+              guid: NewVoice.guild.id,
+              id: OldVoice.member.user.id,
+              room: Channel.id,
+            }).save();
           await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -174,11 +194,16 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
         parent: NewVoice.member.voice.channel.parentId,
         userLimit: NewVoice.member.voice.channel.userLimit
       }).then(async Channel => {
-        new roomtemp({
-          guid: NewVoice.guild.id,
-          id: OldVoice.member.user.id,
-          room: Channel.id,
-        }).save();
+        if (roomtemp) {
+            roomtemp.id = OldVoice.member.user.id,
+              roomtemp.room = Channel.id,
+              roomtemp.save();
+          } else {
+            new roomtemp({
+              guid: NewVoice.guild.id,
+              id: OldVoice.member.user.id,
+              room: Channel.id,
+            }).save();
         await NewVoice.member.voice.setChannel(Channel)
       })
     }
