@@ -66,17 +66,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+          // if (temproom) {
+          //   temproom.id = OldVoice.member.user.id,
+          //     temproom.room = Channel.id,
+          //     temproom.save();
+          // } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-          }            
+          // }            
             await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -90,17 +90,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+          // if (temproom) {
+          //   temproom.id = OldVoice.member.user.id,
+          //     temproom.room = Channel.id,
+          //     temproom.save();
+          // } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-          }
+          // }
             await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -114,17 +114,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-           if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+          //  if (temproom) {
+          //   temproom.id = OldVoice.member.user.id,
+          //     temproom.room = Channel.id,
+          //     temproom.save();
+          // } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-           }
+           // }
             await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -138,17 +138,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-           if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+          //  if (temproom) {
+          //   temproom.id = OldVoice.member.user.id,
+          //     temproom.room = Channel.id,
+          //     temproom.save();
+          // } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-           }
+           // }
             await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -162,17 +162,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-         if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+         // if (temproom) {
+         //    temproom.id = OldVoice.member.user.id,
+         //      temproom.room = Channel.id,
+         //      temproom.save();
+         //  } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-         }
+         // }
             await NewVoice.member.voice.setChannel(Channel)
         })
       }
@@ -198,17 +198,17 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
         parent: NewVoice.member.voice.channel.parentId,
         userLimit: NewVoice.member.voice.channel.userLimit
       }).then(async Channel => {
-       if (temproom) {
-            temproom.id = OldVoice.member.user.id,
-              temproom.room = Channel.id,
-              temproom.save();
-          } else {
+       // if (temproom) {
+       //      temproom.id = OldVoice.member.user.id,
+       //        temproom.room = Channel.id,
+       //        temproom.save();
+       //    } else {
             new roomtemp({
               guid: NewVoice.guild.id,
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-           }
+           // }
             await NewVoice.member.voice.setChannel(Channel)
       })
     }
