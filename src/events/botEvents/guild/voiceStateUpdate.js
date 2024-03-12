@@ -124,7 +124,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-          await NewVoice.member.voice.setChannel(Channel)
+            await NewVoice.member.voice.setChannel(Channel)
+          }
         })
       }
     }
@@ -147,7 +148,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-          await NewVoice.member.voice.setChannel(Channel)
+            await NewVoice.member.voice.setChannel(Channel)
+          }
         })
       }
     }
@@ -160,7 +162,7 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
           parent: NewVoice.member.voice.channel.parentId,
           userLimit: NewVoice.member.voice.channel.userLimit
         }).then(async Channel => {
-          if (temproom) {
+         if (temproom) {
             temproom.id = OldVoice.member.user.id,
               temproom.room = Channel.id,
               temproom.save();
@@ -170,7 +172,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-          await NewVoice.member.voice.setChannel(Channel)
+            await NewVoice.member.voice.setChannel(Channel)
+          }
         })
       }
     }
@@ -195,7 +198,7 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
         parent: NewVoice.member.voice.channel.parentId,
         userLimit: NewVoice.member.voice.channel.userLimit
       }).then(async Channel => {
-        if (temproom) {
+       if (temproom) {
             temproom.id = OldVoice.member.user.id,
               temproom.room = Channel.id,
               temproom.save();
@@ -205,7 +208,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
               id: OldVoice.member.user.id,
               room: Channel.id,
             }).save();
-        await NewVoice.member.voice.setChannel(Channel)
+            await NewVoice.member.voice.setChannel(Channel)
+          }
       })
     }
   }
