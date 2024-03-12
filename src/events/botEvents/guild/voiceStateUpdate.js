@@ -13,14 +13,61 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
   const member = NewVoice.guild.members.cache.get(user.id);
   let memberCount;
   let channel;
+  
   if (roomsettings) {
     channelName = roomsettings.name || "{emoji} {channel name}";
   } else {
     channelName = "{emoji} {channel name}";
   }
+    if (roomauto) {
+    channel = client.channels.cache.get(roomauto.autovoice);
+    memberCount = channel.members.size;
+  } else if (roomsettings) {
+    if (roomsettings.room) {
+        channel = client.channels.cache.get(roomsettings.room);
+        memberCount = channel.members.size;
+        if (count) {
+            channelcount.guild = NewVoice.guild.id,
+            channelcount.ChannelCount = memberCount,
+            channelcount.save();
+        }
+    } else if (roomsettings.room1){
+        channel = client.channels.cache.get(roomsettings.room1);
+        memberCount = channel.members.size;
+      if (count) {
+            channelcount.guild = NewVoice.guild.id,
+            channelcount.ChannelCount = memberCount,
+            channelcount.save();
+        }
+    } else if (roomsettings.room2){
+        channel = client.channels.cache.get(roomsettings.room2);
+        memberCount = channel.members.size;
+      if (count) {
+            channelcount.guild = NewVoice.guild.id,
+            channelcount.ChannelCount = memberCount,
+            channelcount.save();
+        }
+    } else if (roomsettings.room3){
+        channel = client.channels.cache.get(roomsettings.room3);
+        memberCount = channel.members.size;
+      if (count) {
+            channelcount.guild = NewVoice.guild.id,
+            channelcount.ChannelCount = memberCount,
+            channelcount.save();
+        }
+    } else if (roomsettings.room4){
+        channel = client.channels.cache.get(roomsettings.room4);
+        memberCount = channel.members.size;
+      if (count) {
+            channelcount.guild = NewVoice.guild.id,
+            channelcount.ChannelCount = memberCount,
+            channelcount.save();
+        }
+    }
+  }
   if (count) {
-    channelName = channelName.replace(`{channel name}`, `Voice ${count.ChannelCount}`)
-    channelName = channelName.replace(`{channel count}`, `${count.ChannelCount}`)
+    channelName = channelName.replace(`{channel name}`, `Voice ${memberCount}`)
+    channelName = channelName.replace(`{channel count}`, `${memberCount}`)
     channelName = channelName.replace(`{emoji}`, "🔊")
     channelName = channelName.replace(`{member}`, `${user.username}`)
     channelName = channelName.replace(`{member tag}`, `${user.tag}`)
@@ -35,27 +82,7 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
     channelName = channelName.replace(`{member}`, `${user.username}`)
     channelName = channelName.replace(`{member tag}`, `${user.tag}`)
   }
-  if (roomauto) {
-    channel = client.channels.cache.get(roomauto.autovoice);
-    memberCount = channel.members.size;
-  } else if (roomsettings) {
-    if (roomsettings.room) {
-        channel = client.channels.cache.get(roomsettings.room);
-        memberCount = channel.members.size;
-    } else if (roomsettings.room1){
-        channel = client.channels.cache.get(roomsettings.room1);
-        memberCount = channel.members.size;
-    } else if (roomsettings.room2){
-        channel = client.channels.cache.get(roomsettings.room2);
-        memberCount = channel.members.size;
-    } else if (roomsettings.room3){
-        channel = client.channels.cache.get(roomsettings.room3);
-        memberCount = channel.members.size;
-    } else if (roomsettings.room4){
-        channel = client.channels.cache.get(roomsettings.room4);
-        memberCount = channel.members.size;
-    }
-  }
+
   if (roomsettings) {
     ///////////////////////////////           ROOM 1                  //////////////////////////////////
     if (roomsettings.room) {
