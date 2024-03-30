@@ -240,8 +240,8 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
       })
     }
   }
-  setInterval(async () => {
-    const ttemproom = await roomtemp.findOne({ guid: NewVoice.guild.id, id: OldVoice.member.user.id });
+  setInterval(async () => { //, id: OldVoice.member.user.id 
+    const ttemproom = await roomtemp.findOne({ guid: NewVoice.guild.id});
     if (ttemproom) {
       if (ttemproom.room == OldVoice.channelId) {
         if (OldVoice.channelId !== null) {
