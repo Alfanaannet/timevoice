@@ -67,7 +67,7 @@ module.exports.run = async (client, OldVoice, NewVoice) => {
   }
   if (count) {
     channelName = channelName.replace(`{channel name}`, `Voice ${memberCount}`)
-    channelName = channelName.replace(`{channel count}`, `${memberCount}`)
+    channelName = channelName.replace(`{channel count}`, `${count.ChannelCount}`)
     channelName = channelName.replace(`{emoji}`, "🔊")
     channelName = channelName.replace(`{member}`, `${user.username}`)
     channelName = channelName.replace(`{member tag}`, `${user.tag}`)
